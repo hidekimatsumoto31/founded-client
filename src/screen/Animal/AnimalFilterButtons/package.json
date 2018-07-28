@@ -1,0 +1,5 @@
+{
+  "name": "AnimalFilterButtons",
+  "private": true,
+  "main": "./AnimalFilterButtons.connect.js"
+}

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { fetchAnimals, resetAnimals } from 'modules/animals/actions'
 
-import CarouselButtons from './CarouselButtons.js'
+import AnimalFilterButtons from './AnimalFilterButtons.js'
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -10,4 +10,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(null, mapDispatchToProps)(CarouselButtons)
+export default connect(null, mapDispatchToProps)(AnimalFilterButtons)

@@ -1,0 +1,6 @@
+{
+  "name": "Animal",
+  "private": true,
+  "main": "./Animal.connect.js"
+}
+

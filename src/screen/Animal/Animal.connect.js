@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 
-import Carousel from './Carousel.screen.js'
+import Animal from './Animal.screen.js'
 
 const mapStateToProps = ({ animal }) => ({ ...animal })
 
-export default connect(mapStateToProps)(Carousel)
+export default connect(mapStateToProps)(Animal)

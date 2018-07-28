@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Button from 'src/base/Button'
 import Icon from 'src/base/Icon'
 
-import styles from './CarouselStyle.scss'
+import styles from './AnimalFilterButtons.scss'
 
 const findActiveFilter = (filters) => {
   return Object.keys(filters).reduce((accumulator, f) => {
@@ -15,7 +15,7 @@ const findActiveFilter = (filters) => {
   }, [])
 }
 
-class CarouselButtons extends Component {
+class AnimalFilterButtons extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -86,10 +86,10 @@ class CarouselButtons extends Component {
   }
 }
 
-CarouselButtons.propTypes = {
+AnimalFilterButtons.propTypes = {
   className: PropTypes.string,
   fetchAnimals: PropTypes.func.isRequired,
   resetAnimals: PropTypes.func.isRequired
 }
 
-export default CarouselButtons
+export default AnimalFilterButtons
