@@ -1,5 +1,5 @@
 {
-  "name": "react-boilerplate",
+  "name": "founded",
   "version": "1.0.0",
   "main": "webpack.config.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "author": "Cassio Hideki Matsumoto",
   "license": "UNLICENSED",
-  "homepage": "boilerplate",
+  "homepage": "founded",
   "dependencies": {
     "@material-ui/core": "^1.3.1",
     "@material-ui/icons": "^1.1.0",

@@ -7,14 +7,8 @@
 
 .buttons {
   position: absolute;
-  right: 40px;
+  right: 10px;
   z-index: 4;
-}
-
-@media (max-width: 700px) {
-  .buttons {
-    right: 10px;
-  }
 }
 
 .loadingWrapper {

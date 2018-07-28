@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import { isEqual, isEmpty } from 'lodash'
+import { isEmpty } from 'lodash'
 
 import CarouselCard from '../../../base/CarouselCard'
 import Icon from '../../../base/Icon'
@@ -21,21 +21,10 @@ class Carousel extends Component {
     this.handleNextSlide = this.handleNextSlide.bind(this)
   }
 
-  componentWillReceiveProps (prevProps) {
-    const { animals } = this.props
-
-    if (!isEqual(animals, prevProps.animals)) {
-      this.setState({
-        current: 0,
-        previous: 0
-      })
-    }
-  }
-
   render () {
-    const { animals } = this.props
+    const { images } = this.props
 
-    const cards = animals.map((animalUrl, index) => {
+    const cards = images.map((animalUrl, index) => {
       return this.renderCarouselItem(animalUrl, index)
     })
 
@@ -109,11 +98,11 @@ class Carousel extends Component {
 
   findNext () {
     const { current } = this.state
-    const { animals } = this.props
+    const { images } = this.props
 
     const next = current + 1
 
-    if (next >= animals.length) {
+    if (next >= images.length) {
       return 0
     }
 
@@ -122,12 +111,12 @@ class Carousel extends Component {
 
   findPrevious () {
     const { current } = this.state
-    const { animals } = this.props
+    const { images } = this.props
 
     const previous = current - 1
 
     if (previous < 0) {
-      return animals.length - 1
+      return images.length - 1
     }
 
     return previous
@@ -146,20 +135,26 @@ class Carousel extends Component {
   }
 
   isRestartNext () {
-    return this.state.current === 0 && this.state.previous === (this.props.animals.length - 1)
+    const { current, previous } = this.state
+    const { images } = this.props
+
+    return current === 0 && previous === (images.length - 1)
   }
 
   isRestartPrevious () {
-    return this.state.current === (this.props.animals.length - 1) && this.state.previous === 0
+    const { current, previous } = this.state
+    const { images } = this.props
+
+    return current === (images.length - 1) && previous === 0
   }
 }
 
 Carousel.propTypes = {
-  animals: PropTypes.array
+  images: PropTypes.array
 }
 
 Carousel.defaultProps = {
-  animals: []
+  images: []
 }
 
 export default Carousel
