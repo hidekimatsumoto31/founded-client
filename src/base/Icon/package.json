@@ -1,0 +1,5 @@
+{
+  "name": "Icon",
+  "private": true,
+  "main": "./Icon.js"
+}

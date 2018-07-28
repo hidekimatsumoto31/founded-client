@@ -1,0 +1,5 @@
+{
+  "name": "animalReducer",
+  "private": true,
+  "main": "./animalReducer.js"
+}

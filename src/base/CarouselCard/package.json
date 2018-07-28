@@ -1,0 +1,5 @@
+{
+  "name": "CarouselCard",
+  "private": true,
+  "main": "./CarouselCard.js"
+}

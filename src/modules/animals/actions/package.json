@@ -1,0 +1,5 @@
+{
+  "name": "animalActions",
+  "private": true,
+  "main": "./animalActions.js"
+}

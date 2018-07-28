@@ -1,0 +1,5 @@
+{
+  "name": "MainScreen",
+  "private": true,
+  "main": "./MainScreen.js"
+}
