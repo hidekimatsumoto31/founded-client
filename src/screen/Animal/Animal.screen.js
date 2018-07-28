@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Carousel from './Carousel'
 import AnimalFilterButtons from './AnimalFilterButtons'
-import Spinner from 'src/base/Spinner'
+import Spinner from '../..//base/Spinner'
 
 import styles from './Animal.scss'
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Button from 'src/base/Button'
-import Icon from 'src/base/Icon'
+import Button from '../../../base/Button'
+import Icon from '../../../base//Icon'
 
 import styles from './AnimalFilterButtons.scss'
 
@@ -33,6 +33,7 @@ class AnimalFilterButtons extends Component {
   fetchAnimals () {
     const { filters } = this.state
     const { fetchAnimals, resetAnimals } = this.props
+
     const activeFilters = findActiveFilter(filters)
 
     if (activeFilters.length === 1) {

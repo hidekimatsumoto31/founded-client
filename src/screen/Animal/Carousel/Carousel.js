@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { isEqual } from 'lodash'
 import PropTypes from 'prop-types'
-import CarouselCard from 'src/base/CarouselCard'
-import Icon from 'src/base/Icon'
 import classnames from 'classnames'
+import { isEqual, isEmpty } from 'lodash'
+
+import CarouselCard from '../../../base/CarouselCard'
+import Icon from '../../../base/Icon'
 
 import styles from './Carousel.scss'
 
@@ -37,6 +38,14 @@ class Carousel extends Component {
     const cards = animals.map((animalUrl, index) => {
       return this.renderCarouselItem(animalUrl, index)
     })
+
+    if (isEmpty(cards)) {
+      return (
+        <div className={styles.carouselWrapper}>
+          <div className={styles.noImage}>No Images</div>
+        </div>
+      )
+    }
 
     return (
       <div className={styles.carouselWrapper}>
