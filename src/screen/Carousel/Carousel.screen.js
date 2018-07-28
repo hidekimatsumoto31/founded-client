@@ -1,22 +1,31 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import CarouselCard from 'src/base/CarouselCard'
+import CarouselButtons from './CarouselButtons'
+
+import styles from './Carousel.scss'
 
 class Carousel extends Component {
-  componentDidMount () {
-    this.props.fetchAnimals()
+  constructor (props) {
+    super(props)
+    this.state = {
+      filters: {
+        cat: true,
+        shark: false
+      }
+    }
   }
 
   render () {
-    const { animals } = this.props
-
     return (
-      <div>AAAA</div>
+      <div className={styles.carousel}>
+        <CarouselButtons className={styles.buttons} />
+      </div>
     )
   }
 }
 
 Carousel.propTypes = {
-  fetchAnimals: PropTypes.func.isRequired,
   animals: PropTypes.array,
   isLoading: PropTypes.bool
 }

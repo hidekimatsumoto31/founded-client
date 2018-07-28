@@ -1,0 +1,5 @@
+{
+  "name": "CarouselButtons",
+  "private": true,
+  "main": "./CarouselButtons.connect.js"
+}

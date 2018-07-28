@@ -2,17 +2,21 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Button as MaterialButton } from '@material-ui/core'
 
-function Button ({ className, children }) {
+function Button ({ classes, children, onClick, active }) {
+  const color = active ? 'secondary' : 'default'
+
   return (
-    <MaterialButton className={className} variant="fab" aria-label="Add">
+    <MaterialButton onClick={onClick} variant="fab" color={color}>
       {children}
     </MaterialButton>
   )
 }
 
 Button.propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.node
+  classes: PropTypes.object,
+  children: PropTypes.node,
+  onClick: PropTypes.func,
+  active: PropTypes.bool
 }
 
 export default Button

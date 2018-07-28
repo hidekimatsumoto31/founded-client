@@ -1,8 +1,8 @@
 import request from 'utils/request'
 
-export const fetchAnimals = async (params) => {
+export const fetchAnimals = async (type) => {
   try {
-    const response = await request.get('/animals', { params })
+    const response = await request.get('/animals', { params: { type } })
 
     return response.data
   } catch (err) {
