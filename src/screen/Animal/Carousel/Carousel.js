@@ -158,4 +158,8 @@ Carousel.propTypes = {
   animals: PropTypes.array
 }
 
+Carousel.defaultProps = {
+  animals: []
+}
+
 export default Carousel
